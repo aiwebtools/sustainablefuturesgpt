@@ -54,6 +54,12 @@ const Hero: React.FC = () => {
               Powered by Advanced AI Technology
             </div>
             
+            <div className="bg-cyber-green/10 text-white text-xs md:text-sm text-center py-2 px-4 border border-cyber-green/20 rounded-md">
+              <p>
+                Predictions and analyses are for informational purposes only and should not be considered as professional advice.
+              </p>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-gradient">Sustainable Futures</span> <br />
               For A Greener Tomorrow
