@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -9,7 +8,7 @@ const faqItems = [
   },
   {
     question: "How accurate are the predictions provided?",
-    answer: "Sustainable Futures GPT uses real-world data from multiple sources to ensure accuracy. It provides worst-case, best-case, and most likely scenarios based on current trends and variables. However, predictions are always subject to change as new data becomes available or circumstances evolve."
+    answer: "Sustainable Futures GPT uses real-world data from multiple sources to ensure accuracy. It provides worst-case, best-case, and most likely scenarios based on current trends and variables. However, AI can generate incorrect or outdated information. All predictions should be verified with other sources before being used for decision-making."
   },
   {
     question: "Can it help with specific environmental projects?",
@@ -22,6 +21,10 @@ const faqItems = [
   {
     question: "What types of data does it analyze?",
     answer: "It analyzes a wide range of environmental and sustainability data, including climate statistics, resource depletion rates, consumption patterns, technological advancements in green energy, environmental regeneration metrics, economic factors, and geopolitical influences on sustainability."
+  },
+  {
+    question: "Why should I verify the information provided?",
+    answer: "While Sustainable Futures GPT uses sophisticated AI to analyze data, all AI systems have limitations and can sometimes generate incorrect, outdated, or misleading information. Always cross-check critical information with other reliable sources, especially before making important decisions based on the provided analyses."
   },
   {
     question: "How can I get started with Sustainable Futures GPT?",
@@ -74,6 +77,13 @@ const FAQ: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
+          
+          <div className="neo-card p-4 mb-8 border-l-4 border-cyber-orange">
+            <p className="text-white/90 text-sm">
+              <strong className="text-cyber-orange">Important:</strong> AI systems can generate incorrect or outdated information. 
+              Always verify any data, predictions, or recommendations from Sustainable Futures GPT before making decisions.
+            </p>
+          </div>
           
           <div className="mt-12 space-y-4">
             {faqItems.map((item, index) => (

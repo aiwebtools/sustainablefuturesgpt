@@ -46,6 +46,10 @@ const Disclaimer: React.FC = () => {
           </div>
           
           <div className="neo-card p-8 space-y-6 text-white/70">
+            <p className="text-cyber-orange font-semibold text-lg mb-4">
+              AI-Generated Content Warning: AI systems can produce inaccurate, incomplete, or misleading information. Always verify any information, predictions, or recommendations before making decisions or taking action.
+            </p>
+            
             <p>
               <strong className="text-white">Information Purpose Only:</strong> Sustainable Futures GPT provides information for educational and informational purposes only. The analyses, predictions, and recommendations should not be considered as professional advice on environmental, legal, financial, or other specialized matters.
             </p>

@@ -56,7 +56,8 @@ const Hero: React.FC = () => {
             
             <div className="bg-cyber-green/10 text-white text-xs md:text-sm text-center py-2 px-4 border border-cyber-green/20 rounded-md">
               <p>
-                Predictions and analyses are for informational purposes only and should not be considered as professional advice.
+                Predictions and analyses are for informational purposes only and should not be considered as professional advice. 
+                <strong> AI may generate incorrect information, so always verify any data or recommendations before taking action.</strong>
               </p>
             </div>
             
