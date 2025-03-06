@@ -28,6 +28,13 @@ const Hero: React.FC = () => {
     };
   }, []);
   
+  const handleScrollDown = () => {
+    const featuresSection = document.querySelector('#features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       {/* Background animated gradient */}
@@ -92,7 +99,11 @@ const Hero: React.FC = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <div 
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce cursor-pointer"
+          onClick={handleScrollDown}
+          aria-label="Scroll down"
+        >
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
             <div className="w-1 h-2 bg-white/50 rounded-full"></div>
           </div>
