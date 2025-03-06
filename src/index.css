@@ -54,7 +54,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-gradient-to-br from-white/5 to-white/2 backdrop-blur-sm border border-white/10 rounded-2xl shadow-lg;
+    @apply bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl shadow-lg;
   }
   
   .neo-card {
