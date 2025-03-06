@@ -8,6 +8,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Disclaimer from '../components/Disclaimer';
 import Footer from '../components/Footer';
+import TopDisclaimer from '../components/TopDisclaimer';
 import { toast } from '../hooks/use-toast';
 
 const Index = () => {
@@ -39,6 +40,7 @@ const Index = () => {
   
   return (
     <div className="min-h-screen bg-cyber-black text-white overflow-hidden">
+      <TopDisclaimer />
       <Navbar />
       
       <main>

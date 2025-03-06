@@ -109,14 +109,6 @@ const HowItWorks: React.FC = () => {
                   className="w-full h-auto transition-transform duration-10000 hover:scale-110"
                   style={{ aspectRatio: "2/1" }}
                 />
-                <a 
-                  href="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/a-photo-of-a-future-city-with-vertical-gardens.png/:/cr=t:5.43%25,l:0%25,w:100%25,h:89.13%25/rs=w:1200,h:600,cg:true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 bg-gradient-to-t from-cyber-black/60 to-transparent flex items-end justify-center pb-6"
-                >
-                  <span className="text-white/80 text-sm hover:text-white transition-colors">View Full Image</span>
-                </a>
               </div>
             </div>
           </div>
