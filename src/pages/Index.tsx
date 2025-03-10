@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -7,6 +8,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Disclaimer from '../components/Disclaimer';
 import Footer from '../components/Footer';
+import PopupDisclaimer from '../components/PopupDisclaimer';
 import { toast } from '../hooks/use-toast';
 
 const Index = () => {
@@ -39,7 +41,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-cyber-black text-white overflow-hidden">
       <Navbar />
-      
+      <PopupDisclaimer />
       <main>
         <Hero />
         <Features />
