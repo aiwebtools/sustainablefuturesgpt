@@ -51,24 +51,24 @@ const Hero: React.FC = () => {
         <div ref={sectionRef} className="flex flex-col lg:flex-row items-center gap-12 transition-all duration-1000 transform opacity-0 translate-y-10">
           <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
             <div className="inline-block bg-white/5 px-4 py-1 rounded-full backdrop-blur-sm border border-white/10 text-sm font-medium text-cyber-green animate-fade-in">
-              Powered by Advanced AI Technology
+              Free AI Web Tools - Powered by Advanced AI Technology
             </div>
             
             <div className="bg-cyber-green/10 text-white text-xs md:text-sm text-center py-2 px-4 border border-cyber-green/20 rounded-md">
               <p>
-                Predictions and analyses are for informational purposes only and should not be considered as professional advice. 
+                <strong>AI Disclaimer:</strong> This free AI tool provides predictions and analyses for informational purposes only. 
                 <strong> AI may generate incorrect information, so always verify any data or recommendations before taking action.</strong>
               </p>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="text-gradient">Sustainable Futures</span> <br />
-              For A Greener Tomorrow
+              <span className="text-gradient">Free AI Tools for</span> <br />
+              <span className="text-gradient">Sustainable Futures</span>
             </h1>
             
             <p className="text-lg text-white/70 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Guiding humanity toward harmony with nature through data-driven insights, 
-              eco-strategies, and advanced AI-powered predictions.
+              Access powerful AI web tools for free. Guiding humanity toward harmony with nature through 
+              data-driven insights, eco-strategies, and advanced AI-powered environmental predictions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -77,13 +77,18 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary group"
+                title="Try Free AI Tool - Sustainable Futures GPT"
               >
-                Get Started
+                Try Free AI Tool
                 <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
               </a>
-              <a href="#how-it-works" className="btn-secondary">
-                Learn More
+              <a href="#how-it-works" className="btn-secondary" title="Learn More About AI Web Tools">
+                Learn More About AI Tools
               </a>
+            </div>
+            
+            <div className="text-xs text-white/50 italic">
+              Part of the AiWebTools.Ai ecosystem - Your trusted source for free AI web tools
             </div>
           </div>
           
@@ -109,12 +114,12 @@ const Hero: React.FC = () => {
         <div 
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce cursor-pointer"
           onClick={handleScrollDown}
-          aria-label="Scroll down"
+          aria-label="Scroll down to explore free AI tools"
         >
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-1">
             <div className="w-1 h-2 bg-white/50 rounded-full"></div>
           </div>
-          <span className="text-white/50 text-xs mt-2">Scroll Down</span>
+          <span className="text-white/50 text-xs mt-2">Explore AI Tools</span>
         </div>
       </div>
     </section>

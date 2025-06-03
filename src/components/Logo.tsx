@@ -20,12 +20,13 @@ const Logo: React.FC<LogoProps> = ({ className, showSubtitle = true }) => {
         </span>
         {showSubtitle && (
           <span className="text-xs text-white/50 -mt-1">
-            Presented by{" "}
+            Free AI Web Tools by{" "}
             <a 
               href="https://www.aiwebtools.ai" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-cyber-green transition-colors"
+              title="AI Web Tools - Free AI Tools Platform"
             >
               AiWebTools.Ai
             </a>
