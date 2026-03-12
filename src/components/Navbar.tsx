@@ -16,6 +16,13 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu on route hash change
+  useEffect(() => {
+    const handleHashChange = () => setIsMobileMenuOpen(false);
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -48,7 +55,7 @@ const Navbar: React.FC = () => {
             <a href="#faq" className="nav-link">FAQ</a>
             <a href="#disclaimer" className="nav-link">Disclaimer</a>
             <a 
-              href="https://www.aiwebtools.ai"
+              href="https://aiwebtools.lovable.app/?via=aiwebtools"
               target="_blank"
               rel="noopener noreferrer" 
               className="nav-link"
@@ -67,8 +74,9 @@ const Navbar: React.FC = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-white hover:text-cyber-green transition-colors"
+            className="md:hidden text-white hover:text-cyber-green transition-colors touch-manipulation"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -80,53 +88,55 @@ const Navbar: React.FC = () => {
       </div>
       
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-cyber-dark/95 backdrop-blur-md shadow-lg py-4 animate-slide-down">
-          <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <a 
-              href="https://chatgpt.com/g/g-bMxXNoPen-sustainable-futures-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-link py-3 px-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </a>
-            <a 
-              href="#faq" 
-              className="nav-link py-3 px-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
-            </a>
-            <a 
-              href="#disclaimer" 
-              className="nav-link py-3 px-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Disclaimer
-            </a>
-            <a 
-              href="https://www.aiwebtools.ai"
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="nav-link py-3 px-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              More AI Tools
-            </a>
-            <a 
-              href="https://chatgpt.com/g/g-bMxXNoPen-sustainable-futures-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary mt-2 mx-4"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get Started
-            </a>
-          </div>
+      <div 
+        className={`md:hidden absolute top-full left-0 w-full bg-cyber-dark/95 backdrop-blur-md shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-[400px] py-4 opacity-100' : 'max-h-0 py-0 opacity-0'
+        }`}
+      >
+        <div className="container mx-auto px-4 flex flex-col space-y-1">
+          <a 
+            href="https://chatgpt.com/g/g-bMxXNoPen-sustainable-futures-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-link py-3 px-4 touch-manipulation active:bg-white/5 rounded-lg"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a 
+            href="#faq" 
+            className="nav-link py-3 px-4 touch-manipulation active:bg-white/5 rounded-lg"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            FAQ
+          </a>
+          <a 
+            href="#disclaimer" 
+            className="nav-link py-3 px-4 touch-manipulation active:bg-white/5 rounded-lg"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Disclaimer
+          </a>
+          <a 
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
+            target="_blank"
+            rel="noopener noreferrer" 
+            className="nav-link py-3 px-4 touch-manipulation active:bg-white/5 rounded-lg"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            More AI Tools
+          </a>
+          <a 
+            href="https://chatgpt.com/g/g-bMxXNoPen-sustainable-futures-gpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-2 mx-4 touch-manipulation"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Get Started
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 };

@@ -22,7 +22,7 @@ const Logo: React.FC<LogoProps> = ({ className, showSubtitle = true }) => {
           <span className="text-xs text-white/50 -mt-1">
             Free AI Web Tools by{" "}
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-cyber-green transition-colors"

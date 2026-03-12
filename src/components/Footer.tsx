@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
           </p>
           
           <a 
-            href="https://www.aiwebtools.ai"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary !rounded-full !py-2 !px-5 text-sm flex items-center gap-2"
